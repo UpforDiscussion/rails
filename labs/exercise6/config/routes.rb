@@ -1,10 +1,10 @@
-Excercise5::Application.routes.draw do
+Exercise6::Application.routes.draw do
 
 
-  match '/stock' => 'home#stock' 
-  match '/create' => 'home#create'
- 
-
+  match '/a' => 'home#a'
+  match '/b' => 'home#b'
+  match '/c' => 'home#c'
+  match '/switch' => 'home#switch' 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
