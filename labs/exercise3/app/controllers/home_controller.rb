@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
 
-	def start
+	def start #its job is just to render the start page
 	end
 
-	def result
+	def result  #
 		@name = params[:name]
 		@length = @name.length
 
