@@ -1,0 +1,10 @@
+<h1>How many boxes?</h1>
+
+<%= form_tag '/start' do %>
+
+	<%= label_tag 'Boxes to create' %> 
+	<%= text_field_tag '@boxes' %>
+
+	<%= submit_tag 'create!' %>
+
+<% end %> 
