@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: creatures
+#
+#  id               :integer          not null, primary key
+#  name             :string(255)
+#  weapon           :string(255)
+#  password_digest  :string(255)
+#  creature_type_id :integer
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  weapon: MyString
+  password_digest: MyString
+  creature_type_id: 1
+
+two:
+  name: MyString
+  weapon: MyString
+  password_digest: MyString
+  creature_type_id: 1
