@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+CreatureType.delete_all
+Creature.delete_all
+
+ct1 = CreatureType.create(:name => "alien")
+ct2 = CreatureType.create(:name => "predator")
+ct3 = CreatureType.create(:name => "godzilla")
+ct4 = CreatureType.create(:name => "medusa")
+
+creature_types = [ct1, ct2, ct3, ct4]
+weapons = ['knife', 'gun', 'boomerang', 'magic', 'mace']
+
+('A')

@@ -11,5 +11,6 @@
 #
 
 class Message < ActiveRecord::Base
+  belongs_to :sender, :class_name =>
   attr_accessible :message_text, :receiver_id, :sender_id
 end
