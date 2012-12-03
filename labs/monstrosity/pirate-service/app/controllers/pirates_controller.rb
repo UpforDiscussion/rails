@@ -1,18 +1,20 @@
 class PiratesController < ApplicationController
+  
+  before_filter :allow_cross_origin_access
+
   # GET /pirates
   # GET /pirates.json
   def index
     @pirates = Pirate.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html 
       format.json { render json: @pirates }
     end
   end
 
   # GET /pirates/1
   # GET /pirates/1.json
-  
   def show
     @pirate = Pirate.find(params[:id])
 
@@ -42,10 +44,9 @@ class PiratesController < ApplicationController
   # POST /pirates.json
   def create
     @pirate = Pirate.new(params[:pirate])
-  
+
     respond_to do |format|
       if @pirate.save
-        Notifications.welcome(@pirate.name).deliver
         format.html { redirect_to @pirate, notice: 'Pirate was successfully created.' }
         format.json { render json: @pirate, status: :created, location: @pirate }
       else
@@ -82,4 +83,12 @@ class PiratesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+    private
+      def allow_cross_origin_access
+        response.headers['Access-Control-Allow-Origin'] = '*'
+        
+      end
+
+
 end

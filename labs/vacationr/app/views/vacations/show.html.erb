@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @vacation.name %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @vacation.lat %>
+</p>
+
+<p>
+  <b>Long:</b>
+  <%= @vacation.long %>
+</p>
+
+<p>
+  <b>Zoom:</b>
+  <%= @vacation.zoom %>
+</p>
+
+
+<%= link_to 'Edit', edit_vacation_path(@vacation) %> |
+<%= link_to 'Back', vacations_path %>
